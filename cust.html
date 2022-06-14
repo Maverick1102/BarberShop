@@ -1,0 +1,49 @@
+<html>
+    <head> 
+    <title>Customer</title>
+<body>
+    <p> Welcome Customer</p>
+    <form action = "cust.php" method =  "POST">
+        <fieldset>
+            <h1> Customer Booking</h1>
+            <label for = "name">Name : </label>            
+            <input type = "text" name = "name" required = "">
+            <br> 
+            <br>
+            <label for = "hp">HP Number : </label> 
+            <input type = "number" name = "hp" required = "">
+            <br> 
+            <br> 
+            <label for="appointment">Appointment Details : </label>
+            <input type="datetime-local"  name="appointment" required = "" >
+            <br> 
+            <br> 
+            <label for="service">Service Required</label>
+            <br>
+            <br>
+            <input type="checkbox" name="service" value="Haircut">
+            <label for="Haircut">Haircut</label>
+            <br>
+            <br>
+            <input type="checkbox" name="service" value="Shave">
+            <label for="Shave">Shave</label>
+            <br>
+            <br>
+            <input type="checkbox" name="service" value="Dye">
+            <label for="Dye">Hair Dye</label>
+            <br>
+            <br>
+            <input type="checkbox" name="service" value="Massage">
+            <label for="Massage">Head Massage</label>
+            <br>
+            <br>
+            <input type="checkbox" name="service" value="later">
+            <label for="later">Notify Later</label>
+            <br>
+            <br>
+            <button onclick="disp_confirm()" name="submit">Submit</button>
+              </fieldset>
+    </form>
+</body>
+</head>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en" >
+<body>
+  
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+  <script src="main.js"></script>
+  <audio controls autoplay>
+    <source src="shookones.mp3" type="audio/mp3">
+  </audio>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="main.css">
+  <title>Rex Barbershop</title>
+</head>
+
+<main>
+  <div class="side-bar">
+    <div class="logo-top">
+      <img src="vanillaice.jpg" alt="King" >
+    
+    <ul class="nav-link">
+      <li class="nav-tab" style="text-align: center; background-color: rgb(0, 255, 149);">
+        
+        <span>
+          <b>Rex Barbershop</b>   
+        </span>
+        
+      </li>
+      <li class="nav-tab" >
+        <a href="#us">
+          <span>
+            About Us
+          </span>
+        </a>
+      </li>
+      <li class="nav-tab" >
+        <a href="#workers">
+          <span>
+            Workers
+          </span>
+        </a>
+      </li>
+      <li class="nav-tab" >
+        <a href="#pricing">
+          <span>
+            Pricing
+          </span>
+        </a>
+      </li>
+      <li class="nav-tab" >
+        <a href="#appointment">
+          <span>
+            Appointment
+          </span>
+        </a>
+      </li>
+      <li >
+        <a href="#contact">
+          <span>
+            Contact Info
+          </span>
+        </a>
+      </li>
+      <li >
+        <a href="admin.php">
+          <span>
+            Admin
+          </span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  </div>
+  <div class="tengah">
+    <div >
+      <h1>Rex Barbershop</h1>
+      <br>
+      <h3 id="us" data-view-active="true">About Us</h3>
+      <br>
+    </div>
+    <br>
+    <div >
+      <h1>Rex Barbershop</h1>
+      <br>
+      <h3 id="workers" data-view-active="true">Barbers</h3>
+      <br>
+      <div id="Cube" class="tabcontent">
+        <img src="ice.jpg" alt="King" width="340" height="340">
+        <h1>Kiub</h1>
+        <p>Mans Only Calm When Cutting Hair</p>
+      </div>
+      
+      <div id="Snoopy" class="tabcontent">
+        <img src="snoop.jpg" alt="King" width="340" height="340">
+        <h1>Snoopy</h1>
+        <p>Alleycats Got Inspired By Him</p>
+      </div>
+      
+      <div id="Vanilla" class="tabcontent">
+        <img src="vanilla.webp" alt="King" width="340" height="340">
+        <h1>Iceman</h1>
+        <p>Keep Yo Girl Safe</p>
+      </div>
+      
+      <div id="Biggie" class="tabcontent">
+        <img src="biggie.jpg" alt="King" width="340" height="340" >
+        <h1>Biggie</h1>
+        <p>King Of Cuttin</p>
+      </div>
+      
+      <button class="tablink" onclick="link('Cube', this, 'red')" id="defaultOpen">Kiub</button>
+      <button class="tablink" onclick="link('Snoopy', this, 'green')">Snoopy </button>
+      <button class="tablink" onclick="link('Vanilla', this, 'blue')">Iceman</button>
+      <button class="tablink" onclick="link('Biggie', this, 'orange')">Biggie</button>
+    </div>
+    <script>
+      function link(Name, elmnt, color) {
+        // Hide all elements with class="tabcontent" by default */
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+      
+        // Remove the background color of all tablinks/buttons
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].style.backgroundColor = "";
+        }
+      
+        // Show the specific tab content
+        document.getElementById(Name).style.display = "block";
+      
+        // Add the specific color to the button used to open the tab content
+        elmnt.style.backgroundColor = color;
+      }
+      
+      // Get the element with id="defaultOpen" and click on it
+      document.getElementById("defaultOpen").click();
+  </script>
+    
+    <br>
+    <div >
+      <h1>Rex Barbershop</h1>
+      <br>
+      <h3 id="pricing" data-view-active="true">Pricing</h3>
+      <br>
+      <br>
+      <table style = "width : 100%">
+        <style>
+        table, th, td {
+            border:2px solid black;
+          }
+        </style>
+        <tr>
+          <th>Service</th>
+          <th>Price</th>
+        </tr>
+        <tr>
+          <td>Haircut (12 Years And Below)</td>
+          <td>RM 5</td>
+        </tr>
+        <tr>
+          <td>Haircut (Adult)</td>
+          <td>RM 7</td>
+        </tr>
+        <tr>
+          <td>Hair Dye</td>
+          <td>RM 11</td>
+        </tr>
+        <tr>
+          <td>Shave</td>
+          <td>RM 5</td>
+        </tr>
+      </table>
+      <br>
+    </div>
+    <br>
+    <div >
+      <h1>Rex Barbershop</h1>
+      <br>
+      <h3 id="appointment" data-view-active="true">Appointment</h3>
+      <br>
+      <div class="form-popup" id = "form">
+        <form action = "cust1.php" method =  "POST">
+            <fieldset>
+                <h1> Customer Booking</h1>
+                <label for = "name">Name : </label>            
+                <input type = "text" name = "name" required = "">
+                <br> 
+                <br>
+                <label for = "hp">HP Number : </label> 
+                <input type = "number" name = "hp" required = "">
+                <br> 
+                <br> 
+                <label for="appointment">Appointment Details : </label>
+                <input type="datetime-local"  name="appointment" required = "" >
+                <br>
+                <br>
+                <button onclick="myFunction()">Submit</button>
+                <script>
+                  function myFunction() {
+                    alert("Your Appointment Request Has Been Sent. You Will Be Contacted Soon. Thank You");
+                  }
+                  </script>
+              </fieldset>
+        </form>
+    </div>
+
+    </div>
+    <br>
+    <div >
+      <h1>Rex Barbershop</h1>
+      <br>
+      <h3 id="contact" data-view-active="true">Contact Us</h3>
+      <br>
+      <p>For further information, you can reach me via this following ways</p>
+      <br>
+      <h4>Address: </h4>
+      <p><a href="https://goo.gl/maps/da2VBeRn1N87bpXi9">Rex Barbershop</a></p>
+      <br>
+      <h4>Contact Number</h4>
+      <p>999</p>
+      <br>
+      <h4>Email</h4>
+      <p><a href="danesh112@gmail.com">Gmail</a></p>
+      <br>
+      <h3>Please Fill In For Me To RoRo You :))</h3>
+      <br>
+        
+
+    <br>
+  </div>
+
+</main>
+
+</body>
+
+</html>
